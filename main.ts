@@ -1,3 +1,8 @@
+let num1 = 0
+let sum = 0
+let num2 = 0
+let exponent1 = 0
+let exponent2 = 0
 input.onButtonPressed(Button.A, function () {
     basic.clearScreen()
     num1 = randint(1, 10)
@@ -14,8 +19,6 @@ input.onButtonPressed(Button.B, function () {
     basic.showNumber(num2)
 })
 input.onGesture(Gesture.Shake, function () {
-	
+    exponent1 = num1 ** 2
+    exponent2 = num2 ** 2
 })
-let num2 = 0
-let sum = 0
-let num1 = 0
