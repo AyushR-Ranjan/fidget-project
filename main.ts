@@ -36,6 +36,6 @@ input.onGesture(Gesture.Shake, function () {
     basic.showString("" + exponent1 + "+" + exponent2 + "=" + sum1)
 })
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
-    sumSQRT = Math.sqrt(sum1)
-    basic.showString("Hello" + "World")
+    sumSQRT = Math.round(Math.sqrt(sum1))
+    basic.showString("" + sum1 + "SQRT" + "=" + "~" + sumSQRT)
 })
