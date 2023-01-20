@@ -1,8 +1,15 @@
+let exponent1 = 0
 let num1 = 0
 let sum = 0
 let num2 = 0
-let exponent1 = 0
 let exponent2 = 0
+let sum1 = 0
+let sumSQRT = 0
+input.onPinPressed(TouchPin.P0, function () {
+    basic.clearScreen()
+    exponent1 = num1 ** 2
+    basic.showString("" + num1 + "^" + "2" + "=" + exponent1)
+})
 input.onButtonPressed(Button.A, function () {
     basic.clearScreen()
     num1 = randint(1, 10)
@@ -18,7 +25,17 @@ input.onButtonPressed(Button.B, function () {
     num2 = randint(1, 10)
     basic.showNumber(num2)
 })
-input.onGesture(Gesture.Shake, function () {
-    exponent1 = num1 ** 2
+input.onPinPressed(TouchPin.P1, function () {
+    basic.clearScreen()
     exponent2 = num2 ** 2
+    basic.showString("" + num2 + "^" + "2" + "=" + exponent2)
+})
+input.onGesture(Gesture.Shake, function () {
+    basic.clearScreen()
+    sum1 = exponent1 + exponent2
+    basic.showString("" + exponent1 + "+" + exponent2 + "=" + sum1)
+})
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    sumSQRT = Math.sqrt(sum1)
+    basic.showString("Hello" + "World")
 })
