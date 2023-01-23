@@ -18,7 +18,7 @@ input.onButtonPressed(Button.A, function () {
 })
 input.onPinPressed(TouchPin.P2, function () {
     YesOrNo = Math.randomBoolean()
-    if (true) {
+    if (YesOrNo == true) {
         basic.showLeds(`
             # . . . #
             . # . # .
@@ -26,11 +26,12 @@ input.onPinPressed(TouchPin.P2, function () {
             . . # . .
             . . # . .
             `)
-    } else {
+    }
+    if (YesOrNo == false) {
         basic.showLeds(`
             # . . . #
             # # . . #
-            # . # . #
+            # . # # #
             # . . # #
             # . . . #
             `)
